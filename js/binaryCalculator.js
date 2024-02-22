@@ -1,7 +1,7 @@
 // global variables
 let num1 = "";
 let num2 = "";
-let operator;
+let operator = "";
 
 // result container dom
 const res = document.getElementById("res");
@@ -19,7 +19,7 @@ const checkOperator = () => {
 };
 
 // display of calculator
-const display = (value) => {
+const display = (value = "") => {
   if (value) {
     res.innerHTML = value;
   }
@@ -40,6 +40,7 @@ const add = (num) => {
   }
 };
 
+// the operator assignment
 const assignOperator = (opr) => {
   const existOperator = checkOperator();
 
@@ -50,3 +51,11 @@ const assignOperator = (opr) => {
     return alert("Enter the number first or the Operator is already exist!");
   }
 };
+
+// clear all. the C button
+const clearResult = () => {
+    num1 = "";
+    num2 = "";
+    operator = "";
+    res.innerHTML = "";
+}
