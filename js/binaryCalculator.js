@@ -36,6 +36,17 @@ const add = (num) => {
 
   if (existOperator) {
     num2 = num2 + num;
-    display(num1 + operator + num2)
+    display(num1 + operator + num2);
+  }
+};
+
+const assignOperator = (opr) => {
+  const existOperator = checkOperator();
+
+  if (num1 && !existOperator) {
+    operator = opr;
+    display(num1 + operator)
+  } else {
+    return alert("Enter the number first or the Operator is already exist!");
   }
 };
