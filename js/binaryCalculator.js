@@ -52,6 +52,18 @@ const assignOperator = (opr) => {
   }
 };
 
+// the equal. the operation
+const equal = () => {
+    const intNum1 = parseInt(num1, 2);
+    const intNum2 = parseInt(num2, 2);
+    const expression = intNum1 + operator + intNum2;
+
+    const result = eval(expression).toString(2)
+    const flooredResult = Math.floor(result);
+
+    display(flooredResult);
+}
+
 // clear all. the C button
 const clearResult = () => {
     num1 = "";
